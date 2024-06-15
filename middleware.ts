@@ -16,10 +16,8 @@ export default auth((req) => {
 
   const isPublicRoute = publicRoutes.includes(nextUrl.pathname);
   const isAuthRoute = authRoutes.includes(nextUrl.pathname);
-  
-    console.log(nextUrl.pathname)
-    console.log(isAuthRoute);
 
+  console.log(isApiAuthRoute);
   if (isApiAuthRoute && !isLoggedIn) {
     return null;
   }

@@ -4,6 +4,8 @@ import { auth, signOut } from '@/auth'
 const Setting = async () => {
   const session = await auth();
 
+  console.log(session?.user?.role)
+
   return (
     <div>Settings
       <p>{JSON.stringify(session)}</p>
